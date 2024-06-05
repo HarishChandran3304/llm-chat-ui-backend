@@ -12,7 +12,7 @@ async def get_tasks() -> GetTasksModel:
     return tasks
 
 @router.post("/tasks/")
-async def add_task(task: AddTaskModel) -> None:
+async def add_task(task: AddTaskModel) -> AddTaskModel:
     with open("db.json", "r") as f:
         tasks = json.load(f)
     
@@ -20,3 +20,5 @@ async def add_task(task: AddTaskModel) -> None:
 
     with open("db.json", "w") as f:
         json.dump(tasks, f, indent=4)
+    
+    return task

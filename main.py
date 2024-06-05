@@ -1,20 +1,20 @@
 from fastapi import FastAPI
-import json
-from models import Task
+from fastapi.middleware.cors import CORSMiddleware
+from .routers import tasks
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True
+)
+
+app.include_router(tasks.router)
 
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-@app.post("/tasks/")
-async def add_task(task: Task):
-    with open("db.json", "r") as f:
-        tasks = json.load(f)
-    
-    tasks["tasks"].append(task.text)
-
-    with open("db.json", "w") as f:
-        json.dump(tasks, f, indent=4)

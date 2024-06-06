@@ -5,6 +5,16 @@
         "task-3"
     ],
     "conversations": {
+        "test_id": {
+            "prompts": [
+                "test_prompt_1",
+                "test_prompt_2"
+            ],
+            "responses": [
+                "test_response_1",
+                "test_response_2"
+            ]
+        },
         "0": {
             "prompts": [
                 "Hello, how are you?",

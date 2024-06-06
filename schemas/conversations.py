@@ -9,4 +9,4 @@ class ConversationModel(BaseModel):
     responses: list[str]
 
 class ConversationsModel(BaseModel):
-    conversations: dict[int, ConversationModel]
+    conversations: dict[str, ConversationModel]

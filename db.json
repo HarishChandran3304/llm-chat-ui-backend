@@ -1,7 +1,24 @@
 {
-    "tasks": [
-        "task 1",
-        "task 2",
-        "task 3"
-    ]
+    "conversations": {
+        "0": {
+            "prompts": [
+                "Hello, how are you?",
+                "Bye"
+            ],
+            "responses": [
+                "I'm good, how are you?",
+                "Goodbye"
+            ]
+        },
+        "1": {
+            "prompts": [
+                "Yo",
+                "Cya"
+            ],
+            "responses": [
+                "What's up?",
+                "See you later!"
+            ]
+        }
+    }
 }

@@ -1,4 +1,9 @@
 {
+    "tasks": [
+        "task-1",
+        "task-2",
+        "task-3"
+    ],
     "conversations": {
         "0": {
             "prompts": [
@@ -18,6 +23,14 @@
             "responses": [
                 "What's up?",
                 "See you later!"
+            ]
+        },
+        "2": {
+            "prompts": [
+                "Hola!"
+            ],
+            "responses": [
+                "\u00a1Hola a ti tambi\u00e9n! \u00bfC\u00f3mo puedo ayudarte hoy?"
             ]
         }
     }

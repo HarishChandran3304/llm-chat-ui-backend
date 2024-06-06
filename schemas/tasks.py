@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
-class AddTaskModel(BaseModel):
+class TaskModel(BaseModel):
     text: str
 
-class GetTasksModel(BaseModel):
+class TasksModel(BaseModel):
     tasks: list[str]

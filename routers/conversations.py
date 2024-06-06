@@ -11,7 +11,8 @@ async def add_conversation(conversation: AddConversationModel) -> ConversationMo
     response = await get_ai_response(conversation.prompt)
 
     with open('db.json', 'r') as f:
-        conversations = json.load(f)["conversations"]
+        db = json.load(f)
+        conversations = db["conversations"]
     
     if conversation.id in conversations.keys():
         conversations[conversation.id]["prompts"].append(conversation.prompt)
@@ -19,8 +20,9 @@ async def add_conversation(conversation: AddConversationModel) -> ConversationMo
     else:
         conversations[conversation.id] = {"prompts": [conversation.prompt], "responses": [response]}
     
+    db["conversations"] = conversations
     with open('db.json', 'w') as f:
-        json.dump({"conversations": conversations}, f)
+        json.dump(db, f, indent=4)
     
     return conversations[conversation.id]
 

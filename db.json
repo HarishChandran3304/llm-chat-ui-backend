@@ -1,8 +1,8 @@
 {
     "tasks": [
-        "task-1",
-        "task-2",
-        "task-3"
+        "prompt a mail to send to the sales HR regarding hiring freeze",
+        "analyze sales for the last quarter",
+        "schedule a meeting with the sales team"
     ],
     "conversations": {
         "test_id": {

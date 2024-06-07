@@ -1,0 +1,9 @@
+---
+version: v2
+services:
+  - name: web-server
+    type: web
+    run: "fastapi dev main.py"
+    cpuCores: 0.19
+    ramMegabytes: 400
+    port: 8000
